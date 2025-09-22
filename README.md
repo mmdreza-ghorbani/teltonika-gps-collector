@@ -61,22 +61,25 @@ Copy code
 ```bash
 mvn clean package
 Build Docker image:
-
+```
 bash
-Copy code
+```
 docker build -t gatewayservice-jvm .
+```
 Run container (with port mapping + log directory mount):
 
 bash
-Copy code
+```
 mkdir -p /path/on/host/ReceiverLogs
-
+```
+```
 docker run -d \
   --name gatewayservice-jvm \
   -p 9999:9999 \
   -p 8089:8089 \
   -v /path/on/host/ReceiverLogs:/home/java/projects/ReceiverLogs \
   gatewayservice-jvm
+```
 Now your GPS devices can connect to server-ip:9999.
 
 Troubleshooting
@@ -98,11 +101,9 @@ Ensure you are not stuck re-parsing the same packet.
 To request the last known position from the device, use Teltonika FMB remote commands via SMS, GPRS, or FOTA Web — not currently implemented in this service.
 
 License
-MIT License. See LICENSE.
+MIT License.
 
-yaml
-Copy code
 
 ---
 
-Do you want me to also include a **sample hex dump of a raw AVL packet** (from your logs) in this README so dev
+Do you want me to also include a **sample hex dump of a raw AVL packet** (from your logs) in this README
