@@ -98,10 +98,3 @@ To request the last known position from the device, use Teltonika FMB remote com
 
 License
 MIT License. See LICENSE.
-
-yaml
-Copy code
-
----
-
-👉 Do you want me to also include a **sample hex dump of raw AVL data** (like the ones you logged) in the README so that future devs can test parsing against it?
