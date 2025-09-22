@@ -62,20 +62,23 @@ Copy code
 Build Docker image:
 
 bash
-Copy code
+   ```bash
 docker build -t gatewayservice-jvm .
+bash
+
 Run container (with port mapping + log directory mount):
 
-bash
-Copy code
+   ```bash
 mkdir -p /path/on/host/ReceiverLogs
-
+bash
+   ```bash
 docker run -d \
   --name gatewayservice-jvm \
   -p 9999:9999 \
   -p 8089:8089 \
   -v /path/on/host/ReceiverLogs:/home/java/projects/ReceiverLogs \
   gatewayservice-jvm
+bash
 Now your GPS devices can connect to server-ip:9999.
 
 Troubleshooting
