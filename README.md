@@ -105,5 +105,3 @@ MIT License.
 
 
 ---
-
-Do you want me to also include a **sample hex dump of a raw AVL packet** (from your logs) in this README
