@@ -57,28 +57,26 @@ Copy code
 ## Running with Docker
 
 1. Build the JAR:
-   ```bash
-   mvn clean package
+
+```bash
+mvn clean package
 Build Docker image:
 
 bash
-   ```bash
+Copy code
 docker build -t gatewayservice-jvm .
-bash
-
 Run container (with port mapping + log directory mount):
 
-   ```bash
-mkdir -p /path/on/host/ReceiverLogs
 bash
-   ```bash
+Copy code
+mkdir -p /path/on/host/ReceiverLogs
+
 docker run -d \
   --name gatewayservice-jvm \
   -p 9999:9999 \
   -p 8089:8089 \
   -v /path/on/host/ReceiverLogs:/home/java/projects/ReceiverLogs \
   gatewayservice-jvm
-bash
 Now your GPS devices can connect to server-ip:9999.
 
 Troubleshooting
@@ -101,3 +99,10 @@ To request the last known position from the device, use Teltonika FMB remote com
 
 License
 MIT License. See LICENSE.
+
+yaml
+Copy code
+
+---
+
+Do you want me to also include a **sample hex dump of a raw AVL packet** (from your logs) in this README so dev
